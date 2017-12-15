@@ -11,6 +11,12 @@ Test with Python 2.7.9 on Debian Jessie. I'll write it for Python 3.x maybe.<br/
 
 ## ChangeLog
 
+<strong>0.1.6</strong><br/>
+[-] Fixed some bugs<br/>
+[-] Added scan on list of POST parameters<br/>
+[-] Added option to assign default value to a POST parameter<br/>
+[-] Added help function<br/>
+<br/>
 <strong>0.1.5a</strong><br/>
 [-] Fixed some bugs<br/>
 [-] Less than 400 lines of code<br/>
