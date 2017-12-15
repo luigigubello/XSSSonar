@@ -43,6 +43,7 @@ signal.signal(signal.SIGINT, sigint_handler)
 class MyException(Exception):
     pass
 
+# help function
 def help(sos):
 	print '\x1b[1;33;49m' + '\nHELP:' + '\x1b[0m'
 
@@ -222,7 +223,6 @@ def url_xss_finder(site, post, post_value):
 				if err == '':
 					html_content = urllib2.urlopen(request).read()
 					t = 0
-					#print html_content
 					payload_search_list = []
 					while t < 9:
 						if x[t+1] != '':
@@ -272,10 +272,8 @@ def url_xss_finder(site, post, post_value):
 							if payload_search_list[9] != []:
 								c = 1
 					control = 0
-					#print payload_search_list
 					if ((len(payload_search_list[4]) + len(payload_search_list[5]) + len(payload_search_list[6]) + len(payload_search_list[7]) + len(payload_search_list[8])) < len(payload_search_list[0]) or ((len(payload_search_list[4]) + len(payload_search_list[5]) + len(payload_search_list[6]) + len(payload_search_list[7]) + len(payload_search_list[8])) == 0 and payload_search_list[0] != [])):
 						control = 1
-					#print control
 					if (control == 1 or payload_search_list[5] != [] or payload_search_list[6] != [] or payload_search_list[7] != []):
 						print '\x1b[1;39;49m' + 'Payload: ' + '\x1b[0m' + '\x1b[1;31;49m',x[12],'\x1b[0m'
 						print '\x1b[1;31;49m' + 'Vulnerable' + '\x1b[0m'
