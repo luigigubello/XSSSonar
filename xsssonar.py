@@ -293,7 +293,7 @@ def url_xss_finder(site, post, post_value):
 			i += 1
 
 # start text user interface
-print '\x1b[1;39;49m' + '\nType [--help] to read info about the input option.' + '\x1b[0m'
+print '\x1b[1;39;49m' + '\nType [--help] to read info about the input option.\n' + '\x1b[0m'
 check = raw_input('\x1b[1;39;49m' + 'Type [S] if you want to check a single URL or [L] to check a list of sites: ' + '\x1b[0m')
 while (check != 'L' and check != 'l' and check != 'S' and check != 's'):
 	if check == '--help':
@@ -308,7 +308,7 @@ if (check == 'S' or check == 's'):
 			if post_check == '--help':
 				sos = 2
 				help(sos)
-			post_check = raw_input('\x1b[1;39;49m' + '\nChoose between the keys [Y] or [N]:' + '\x1b[0m')
+			post_check = raw_input('\x1b[1;39;49m' + '\nChoose between the keys [Y] or [N]: ' + '\x1b[0m')
 		if (post_check == 'N' or post_check == 'n'):
 			site = raw_input('\x1b[1;39;49m' + '\nType site (with http(s)): ' + '\x1b[0m')
 			while (len(site) < 8):
@@ -341,7 +341,6 @@ if (check == 'S' or check == 's'):
 					post.pop(i)
 				else:
 					i +=1
-			print post
 			while (post == [] or post[0] == '--help'):
 				if post[0] == '--help':
 					sos = 4
