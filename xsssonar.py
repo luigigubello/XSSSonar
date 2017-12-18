@@ -357,14 +357,13 @@ if (check == 'S' or check == 's'):
 			post_value = []
 			while i < len(post):
 				post[i] = post[i].split('=')
-				if len(post[i]) == 1:
-					post_value.append('')
-				elif len(post[i]) == 2:
+				if len(post[i]) == 2:
 					post_value.append(post[i][1])
 					post[i] = post[i][0]
 				else:
 					post[i] = post[i][0]
 					post_value.append('')
+
 				i += 1
 			site = raw_input('\x1b[1;39;49m' + '\nType site (with http(s)): ' + '\x1b[0m')
 			while (len(site) < 8):
