@@ -304,7 +304,7 @@ while (check != 'L' and check != 'l' and check != 'S' and check != 's'):
 if (check == 'S' or check == 's'):
 	while True:	
 		post_check = raw_input('\x1b[1;39;49m' + '\nDo you want to check a POST parameter? [Y/N]: ' + '\x1b[0m')
-		while (post_check != 'y' and post_check != 'Y' and post_check != 'n' and check != 'N'):
+		while (post_check != 'y' and post_check != 'Y' and post_check != 'n' and post_check != 'N'):
 			if post_check == '--help':
 				sos = 2
 				help(sos)
