@@ -50,5 +50,7 @@ Test with Python 2.7.9 on Debian Jessie. I'll write it for Python 3.x maybe.<br/
 
 ## To start
 
-pip install fake-useragent<br/>
+```
+pip install -r requirements.txt<br/>
 python xsssonar.py
+```
